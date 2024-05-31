@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Рыбный Кликер</title>
+  <link rel="stylesheet" href="fish.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+	  background: url("https://static.vecteezy.com/system/resources/previews/006/551/665/non_2x/blue-ocean-with-fish-silhouette-background-free-vector.jpg");
+    } 
+    #score {
+      font-size: 24px;
+      margin-bottom: 20px;
+      user-select: none;
+      border-radius: 15px;
+      color: rgb(9 67 57);
+    }
+    #clickBtn img {
+      width: 100px; 
+      height: 100px;
+      cursor: pointer;
+      user-select: none;
+    }
+    #clickBtn img:hover {
+      user-select: none;
+    }
+
+    #progrees {
+      color: tomato;
+      user-select: none;
+    }
+    
+  </style>
+</head>
+<body class="body" id="body">
+  <h1 id="fishyclicky">Рыбный Кликер</h1>
+  <p id="fishel">Кликните на рыбьего короля, чтобы заработать очки!</p>
+  <p id="pointy">Очки: <span id="score">0</span></p>
+  <button id="clickBtn">
+    <img src="fishKing.png" id="fishBtn"/>
+	<img src="fishskin.png" id="fishSkin"/>
+  </button>
+  <h2 id="progrees">Не волнуйтесь, прогресс сохраняется!</h2>
+  <h3 id="perditor">Игра от Perditor/Fishgod</h3>
+  <a href="fish.html" id="soup">Секреты Рыбы</a>
+  <button onclick="showShop()" id="shopBtn" class="buttons">РЫБНЫЙ МАГАЗИН</button>
+  <div>
+    <button onclick="noSound()" class="buttons" id="butt"> Убрать звук рыбы </button>
+	<button onclick="backSound()" class="buttons" id="butt"> Включить звук рыбы </button>
+    <style>
+	.buttons {
+	  margin: 15px;
+	  font-size: 20px;
+	  background-color: #A0F6F6;
+	}
+	</style>
+  </div>
+  <div>
+      <button class="buttons" onclick="ClickGrader()" id="but">Улучшить клик рыбы!</button>
+      <button class="buttons" onclick="fishCoins()" id="sexycoin">Получить Рыбные Монеты! :O</button>
+      <h2 id="numba">Клики на уровне <span id="gradeCounter">1</span></h2>
+      <h2 id="clickypay">Для следующего уровня клика рыбы заплатите: <span id="payCounter">100</span></h2>
+      <h2 id="buyer">Вы можете купить рыбные монеты за 1000 очков! Ваши рыбные монеты: <span id="coins">0</span></h2>
+      <button class="buttons" onclick="changelogToggle()" id="clTog">Показать изменения!</button>
+      <h4 id="changelog"> Список изменений: <br /> - Добавлен улучшитель кликов. <br /> - Добавлен полноэкранный режим.<br/> - Магазин рыбных скинов! (Фаза 1/2) Добавлены рыбные монеты, которые можно купить за 1000 очков. <br/> - Добавлена кнопка "Сбросить всё", которая сбрасывает весь ваш прогресс, кроме рыбных монет. <br/>- Исправлено множество графических ошибок. <br/>- Магазин рыбных товаров (Фаза 2/2)! Появился магазин рыбных товаров, его можно найти, нажав кнопку "Рыбный магазин". <br/>- рыба</h4>
+      <button onclick="reset()" class="buttons" id="reset">Сбросить всё</button>
+      <style>
+          .changelog {
+            font-size: 30px;
+          }
+      </style>
+  </div>
+  <div id="shop">
+      <button class="buttons" onclick="skinChange1()" id="skin1"> Купить этот скин! (2 Монеты)</button>
+	  <img src="fishskin.png" id="fishskin"/>
+	  <button class="buttons" onclick="skinChange2()"> Купить этот скин! (8 Монет)</button>
+	  <img src="fishlord.png" id="fishskin"/>
+	  <button class="buttons" onclick="bgChange1()" id="wallaperChange"> Купить новые обои! (5 Монет)</button>
+	  <img src="fishwall.jpg" id="fishskin"/>
+  </div>
+<script src="fishopScript.js"></script>
+<script src="FishyScript.js"></script>
+<script src="FishSecret.js"></script>
+<audio id="fishSound" src="Fishy.mp3"></audio>
+</body>
+</html>
